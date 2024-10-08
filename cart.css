@@ -1,0 +1,400 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100..900&display=swap");
+
+/* 重置字體 */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 不累加padding */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置連接 */
+a {
+  color: #444;
+  display: block;
+  /* 預設inline行內元素改為block */
+  text-decoration: none;
+}
+
+main {
+  background-color: #383838;
+}
+
+.cart {
+  margin: auto;
+  width: 390px;
+  height: 844px;
+  background-color: #ffff;
+}
+
+#header {
+  width: 100%;
+  height: 58px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 29px;
+  left: 29px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.categories {
+  width: 189px;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+  margin: auto;
+  align-items: center;
+}
+
+.categories h3 {
+  font-size: 15px;
+  line-height: 21px;
+  color: #bebebe;
+  font-weight: 300;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* 點擊後變粗體黑色和加底線 */
+.categories h3.active {
+  color: black;
+  font-weight: bold;
+  border-bottom: 4px solid #000000;
+  padding-bottom: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  width: 100%;
+  height: 690px;
+  overflow-y: scroll;
+  gap: 16px;
+}
+
+.card {
+  width: 361px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px -2px 8.4px 0px rgba(230, 229, 229, 0.5);
+}
+
+.card_body {
+  cursor: pointer;
+  width: 100%;
+  height: 133px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card .picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 9px;
+  background-color: #d9d9d9;
+}
+
+.card .info {
+  width: 213px;
+  height: 101px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#goods_amount {
+  position: absolute;
+  /* display: none; */
+  font-size: 35px;
+  font-weight: 500;
+  right: 16px;
+  top: 50%;
+  color: #ffffff;
+  transform: translate(0, -50%);
+}
+
+.info .upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.title h3 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: #383838;
+}
+
+.title h2 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.location {
+  width: 39.11px;
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+}
+
+.location h4 {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17px;
+}
+
+.lower p {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 17px;
+  color: #383838;
+}
+
+.lower h5 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.amount {
+  width: 100%;
+  height: 50px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 0 0 10px 10px;
+}
+
+.amount .count {
+  width: 100px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count figure {
+  width: 22.25px;
+  height: 22.25px;
+  cursor: pointer;
+}
+
+.count figure:hover {
+  opacity: 0.7;
+}
+
+.count img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add {
+  width: 137px;
+  height: 26px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: #383838;
+  cursor: pointer;
+}
+
+.add:hover {
+  opacity: 0.7;
+}
+
+.add figure {
+  width: 13px;
+  height: 14px;
+}
+
+.add img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add p {
+  font-weight: 500;
+  font-size: 9px;
+  color: white;
+}
+
+/* 結帳區 */
+#checkout {
+  width: 100%;
+  height: 96px;
+  box-shadow: 0px -2px 8.4px 0px rgba(230, 229, 229, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final_count {
+  width: 152px;
+  height: 96px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.final_count p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+}
+
+.down {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.down figure {
+  width: 19px;
+  height: 19px;
+}
+
+.down img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#final_amount {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 25px;
+}
+
+.down .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.unit {
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  line-height: 10px;
+}
+
+.dollar {
+  width: 119px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.dollar div {
+  width: 100%;
+  height: 50%;
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dollar p {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.dollar h5 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.check {
+  width: 118px;
+  height: 100%;
+  background-color: #383838;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check p {
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+}
